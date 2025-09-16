@@ -30,8 +30,13 @@ namespace dotnetapp.Models
         [StringLength(15, MinimumLength = 6, ErrorMessage = "Mobile number cannot exceed 15 characters.")]
         public string MobileNumber {get;set;}
 
+	[Required(ErrrorMessage = "Address is reqired.")]
+	[StringLength(25, MinimumLength = 10, ErrorMessage = "Address cannot be excees 25 characters.")]
+	public string Address {get;set;}
+
         [Required(ErrorMessage = "User role is required.")]
         [StringLength(20, ErrorMessage = "User role cannot exceed 20 characters.")]
         public string UserRole {get;set;}
+	
     }
 }
